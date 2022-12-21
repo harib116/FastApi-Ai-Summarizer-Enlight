@@ -1,0 +1,17 @@
+[tool.poetry]
+name = "curedu"
+version = "0.1.0"
+description = "An AI assisted Ebook creator."
+authors = ["Harikb <harikrishnan.b@inapp.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.8"
+requests = "^2.28.1"
+
+[tool.poetry.group.dev.dependencies]
+boto3 = "^1.26.34"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
