@@ -2,3 +2,5 @@ transfromers
 bert-extractive-summarizer
 spacy
 pandas
+wikipedia
+nltk
