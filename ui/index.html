@@ -60,7 +60,7 @@
 
     <p>Enter keywords to search for:</p>
     <form id="main" class="search" >
-      <input type="text" placeholder="Keywords.." name="search">
+      <input type="text" placeholder="Keywords.." name="search" id="search">
       <button type="submit"><i class="fa fa-search" ></i></button>
     </form>
 
@@ -72,6 +72,7 @@
       url = 'https://jsonplaceholder.typicode.com/todos/1'
       const searchSubmit = async (event) => {
         event.preventDefault()
+        keyword = document.getElementById('search').value;
         const response = await fetch(url);
         const data = await response.json()
         console.log(data)
