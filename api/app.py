@@ -1,28 +1,30 @@
-from fastapi import FastAPI
+from fastapi import FastAPI, Request
 from mangum import Mangum
+from api.src.summarizer.routers import router as summarizer_router
 
 
 app = FastAPI()
 
 
 @app.get("/")
-def root():
+async def root():
     return {
-        "status": 200,
-        "body": {
-            "message": "Welcome to CurEdu API !"
+       "message": "Welcome to CurEdu API !"
+    }
+
+
+@app.post("/test")
+async def test(request: Request):
+    data = await request.json()
+    return {
+        "data": {
+            "message": "Welcome to CurEdu Query !",
+            "data": data
         }
     }
 
 
-@app.post("/query")
-def root():
-    return {
-        "status": 200,
-        "body": {
-            "message": "Welcome to CurEdu API !"
-        }
-    }
+app.include_router(summarizer_router)
 
 
 handler = Mangum(app)
