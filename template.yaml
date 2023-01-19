@@ -13,8 +13,8 @@ Resources:
     Type: AWS::Serverless::Function
     Properties:
       FunctionName: 'FastAPILambda'
-      CodeUri: app
-      Handler: main.handler
+      CodeUri: api
+      Handler: app.handler
       Runtime: python3.9
       Events:
         HttpApiEvent:
