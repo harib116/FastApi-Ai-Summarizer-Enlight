@@ -1,6 +1,6 @@
 from fastapi import FastAPI, Request
 from mangum import Mangum
-from api.src.summarizer.routers import router as summarizer_router
+from src.summarizer.routers import router as summarizer_router
 
 
 app = FastAPI()

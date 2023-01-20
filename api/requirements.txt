@@ -1,11 +1,11 @@
 # App
 fastapi
 mangum
-uvicorn
+# uvicorn
 
 # AI
 bert-extractive-summarizer
-pandas
+# pandas
 
 # Data Source
-wikipedia
+# wikipedia
