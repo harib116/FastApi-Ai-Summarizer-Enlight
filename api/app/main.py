@@ -1,15 +1,19 @@
 from fastapi import FastAPI, Request
 from mangum import Mangum
-from src.summarizer.routers import router as summarizer_router
+from . import settings
+from .summarizers.routers import router as summarizer_router
 
 
-app = FastAPI()
+app = FastAPI(debug=settings.DEBUG)
 
 
 @app.get("/")
 async def root():
     return {
-       "message": "Welcome to CurEdu API !"
+        "status": 200,
+        "body": {
+            "message": "Welcome to CurEdu APIs !"
+        }
     }
 
 

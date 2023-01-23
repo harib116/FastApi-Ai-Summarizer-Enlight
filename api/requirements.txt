@@ -5,6 +5,7 @@ mangum
 
 # AI
 bert-extractive-summarizer
+torch
 # pandas
 
 # Data Source

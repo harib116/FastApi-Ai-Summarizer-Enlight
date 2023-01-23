@@ -1,5 +1,6 @@
 from fastapi import APIRouter
-from .functions import get_summary
+from summarizer import Summarizer
+# from .functions import get_summary
 from .imodels import SummarizerModel
 
 
@@ -14,7 +15,9 @@ async def root():
 @router.post("/summarize")
 async def get_summary_view(summarizer: SummarizerModel):
     text = summarizer.text
+    summarizer = Summarizer()
+    summary = summarizer(text)    
     return {
         "data": {
-            "summary": await get_summary(text)
+            "summary": summary
     }}
