@@ -1,0 +1,12 @@
+# App
+fastapi
+mangum
+# uvicorn
+
+# AI
+# bert-extractive-summarizer
+# torch
+# pandas
+
+# Data Source
+# wikipedia
