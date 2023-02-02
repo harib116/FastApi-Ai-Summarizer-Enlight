@@ -1,0 +1,14 @@
+version: '3.9'
+services:
+  api:
+    # TODO add args, labels, env_file/environment if needed
+    build: ./api
+    ports:
+      - "8000:8000"
+
+  # TODO web to host html page
+  web:
+    build: ./web
+    ports:
+      - 3000:80
+
