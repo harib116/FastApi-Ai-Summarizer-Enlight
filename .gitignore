@@ -131,3 +131,5 @@ dmypy.json
 
 ## Project
 .aws-sam
+referenc
+*.pkl
