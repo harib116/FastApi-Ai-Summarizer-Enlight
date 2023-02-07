@@ -10,8 +10,9 @@ async def root():
     return {"message": "API for text summarizer."}
 
 
-@router.post("/summarize")
+@router.post("/summarize/")
 async def get_summary_view(summarizer: SummarizerModel):
+    print("@Summarizer")
     text = summarizer.text
     summarizer = get_model_obj("bert_summarizer")
     summary = summarizer(text)
