@@ -12,7 +12,7 @@ summarizeUrl = "/summarizer/summarize/" //post
 // Primary search
 const simpleSearchSubmit = async (event) => {
   event.preventDefault()
-  keywords = searchForm.querySelector("[name='keywords']").value
+  query = searchForm.querySelector("[name='query']").value
   sources = searchForm.querySelector("[name='sources']").value
   // Non helper function
   const response = await fetch(
@@ -23,7 +23,7 @@ const simpleSearchSubmit = async (event) => {
         'Content-Type': 'application/json'
       },
       body: JSON.stringify({
-        "keywords": keywords,
+        "query": query,
         "sources": sources
       })
     }
@@ -49,9 +49,9 @@ async function postData(url = '', data = {}) {
 
 // Data append
 function displayData(data){
+  document.getElementById("output").textContent = JSON.stringify(data, undefined, 2);
   // const elem = document.getElementById("output")
   // elem.append(JSON.stringify(data, undefined, 2))
-  document.getElementById("output").textContent = JSON.stringify(data, undefined, 2);
 
 }
 
@@ -59,13 +59,15 @@ function displayData(data){
 
 async function searchSubmit(event) {
   event.preventDefault();
-  keywords = searchForm.querySelector("[name='keywords']").value
+  displayData("Loading..")
+  query = searchForm.querySelector("[name='query']").value
   sources = searchForm.querySelector("[name='sources']").value
   data = {
-    keywords: keywords,
+    query: query,
     sources: sources
   }
-  response = await postData(testUrl, data)
+  console.log(searchUrl)
+  response = await postData(searchUrl, data)
   displayData(response)
 }
 

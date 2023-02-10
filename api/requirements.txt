@@ -2,6 +2,7 @@
 fastapi
 mangum
 uvicorn
+httpx
 
 # AI
 bert-extractive-summarizer
