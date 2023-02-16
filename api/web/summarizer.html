@@ -37,7 +37,14 @@
       <!-- Summarizer -->
       <div class="container">
         <form id="summarize" class="search">
-        <input type="text" name="article">
+        <div class="container" style="padding: 5%;">
+          <label for="article" style="float: left; margin-right:5%">Text:</label>
+          <input type="text" name="article">
+        </div>
+        <div class="container" style="padding: 5%;">
+          <label for="ratio">Summarizing ratio:</label>
+          <input type="number" value="0.2" step="0.1" min=0 max="1" name="ratio">
+        </div>
         <button type="submit">Summarize <i class="fa fa-search" ></i></button>
         </form>
       </div>

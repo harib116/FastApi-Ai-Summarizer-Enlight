@@ -56,7 +56,6 @@ function displayData(data){
 }
 
 // Search Module
-
 async function searchSubmit(event) {
   event.preventDefault();
   displayData("Loading..")
@@ -82,16 +81,19 @@ async function searchSubmit(event) {
 //   "id": 50
 // }
 
+
+/* Summarizer */
 async function summarizeSubmit(event) {
   event.preventDefault();
-  article = summarizeForm.querySelector("[name='article']").value
   displayData("Loading..")
   console.log("Making API call..")
+  data = {
+    "text": summarizeForm.querySelector("[name='article']").value,
+    "ratio": summarizeForm.querySelector("[name='ratio']").value
+  }
   response = await postData(
     summarizeUrl,
-    {
-      text: article
-    }
+    data
   )
   displayData(response)
 }

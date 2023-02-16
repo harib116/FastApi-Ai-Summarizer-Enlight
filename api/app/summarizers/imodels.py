@@ -1,6 +1,7 @@
-from pydantic import BaseModel
+from pydantic import BaseModel, Field
 
 
-class SummarizerModel(BaseModel):
-    text: str
+class SummarizerInterface(BaseModel):
+    text: str = Field(...)
+    ratio: float = Field(default=0.2)
 
