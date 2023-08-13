@@ -1,13 +1,12 @@
-# App
+# Server
 fastapi
-mangum
 uvicorn
+mangum
+
+# App
 httpx
+python-dotenv
 
 # AI
 bert-extractive-summarizer
 torch
-# pandas
-
-# Data Source
-# wikipedia

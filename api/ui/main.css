@@ -1,0 +1,50 @@
+body {
+    font-family: Arial;
+}
+* {
+    box-sizing: border-box;
+}
+
+/* For non-full width */
+form {
+  margin: auto;
+  max-width: 600px;
+}
+
+form.search input[type=text] {
+    padding: 10px;
+    font-size: 17px;
+    border: 1px solid grey;
+    float: left;
+    width: 80%;
+    background: #f1f1f1;
+    margin-bottom: 5%;
+}
+
+form.search button {
+    padding: 7px;
+    font-size: 17px;
+    border: 1px solid grey;
+    float: left;
+    width: 60%;
+    background: #2196F3;
+    color: white;
+    border-left: none;
+    cursor: pointer;
+    margin-left: 9%;
+}
+
+form.search button:hover {
+    background: #0b7dda;
+}
+
+form.search::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+
+/* output p {
+    background-color: darkgray;
+} */
