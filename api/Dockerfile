@@ -23,5 +23,6 @@ RUN apt update
 COPY . .
 
 
-CMD [ "uvicorn", "app.main:app", "--host", "0.0.0.0", "--workers", "2"]
+# CMD [ "uvicorn", "app.main:app", "--host", "0.0.0.0", "--workers", "2"]
 
+CMD ["python", "main.py"]

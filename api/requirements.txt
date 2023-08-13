@@ -1,6 +1,7 @@
 # Server
 fastapi
 uvicorn
+mangum
 
 # App
 httpx
